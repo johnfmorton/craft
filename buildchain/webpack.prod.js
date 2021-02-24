@@ -44,7 +44,7 @@ module.exports = [
         'build',
         'clean',
         'copy',
-        'favicons',
+        // 'favicons',
         'create-symlink',
         'save-remote-file',
     ),
