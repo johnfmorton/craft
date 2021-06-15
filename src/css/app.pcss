@@ -1,20 +1,12 @@
-/**
- * app.css
- *
- * The entry point for the css.
- *
- */
-
-/**
  * This injects Tailwind's base styles, which is a combination of
  * Normalize.css and some additional base styles.
- *
- * You can see the styles here:
- * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
  */
+@import 'tailwindcss/base';
+
 /**
- * We don't want these in the Control Panel
- * @import "tailwindcss/preflight";
+ * Here we add custom base styles, applied after the tailwind-base
+ * classes
+ *
  */
 
 /**
@@ -29,9 +21,15 @@
  * override them.
  *
  */
-@import './components/webfonts.pcss';
-@import './components/typography.pcss';
 @import './components/global.pcss';
+@import './components/typography.pcss';
+@import './components/webfonts.pcss';
+
+/**
+ * Include styles for individual pages
+ *
+ */
+@import './pages/homepage.pcss';
 
 /**
  * This injects all of Tailwind's utility classes, generated based on your
@@ -41,13 +39,7 @@
 @import 'tailwindcss/utilities';
 
 /**
- * Include styles for individual pages
- *
- */
- @import './pages/welcome.pcss';
-
-/**
  * Include vendor css.
  *
  */
- @import 'vendor.pcss';
+@import 'vendor.pcss';
